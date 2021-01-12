@@ -1,34 +1,22 @@
 import express from "express";
-import { json, urlencoded } from "body-parser";
 import cors from "cors";
-import dotenv from "dotenv";
 import mongoose from "mongoose";
-import UserController from "./controllers/UserController";
-import errorHandler from "./middlewares/errorHandler";
+import bodyParser from "body-parser";
+import env from "./helpers/env.js";
 
-dotenv.config();
-
-const { MONGO_URL, PORT } = process.env;
-
-(async () => {
-  try {
+mongoose.connect(
+  env("mongo_url"),
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  (err) => {
     const app = express();
 
     app.use(cors());
-    app.use(json());
-    app.use(urlencoded({ extended: false }));
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false }));
 
-    app.use("/users", UserController);
-
-    app.use(errorHandler);
-
-    await mongoose.connect(MONGO_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-
-    app.listen(PORT);
-  } catch (e) {
-    process.exit(1);
+    app.listen(env("port"));
   }
-})();
+);

@@ -1,18 +1,13 @@
-import express from "express";
-import asyncHandler from "express-async-handler";
-import UserService from "../services/UserService";
+const create = (req, res) => {
+  return res.json();
+};
 
-const router = express.Router();
+const login = (req, res) => {
+  return res.json();
+};
 
-router.post(
-  "/login",
-  asyncHandler(async (req, res) => {
-    const service = new UserService(req.body);
+const register = (req, res) => {
+  return res.json();
+};
 
-    const user = await service.login();
-
-    return res.status(200).json(user);
-  })
-);
-
-export default router;
+export { create, login, register };
