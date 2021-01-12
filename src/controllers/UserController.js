@@ -1,4 +1,5 @@
 import User from "../models/User";
+import bcrypt from "bcryptjs";
 import { UnprocessableEntity } from "../errors";
 
 const create = (req, res) => {
@@ -11,7 +12,7 @@ const login = async (req, res) => {
   try {
     const user = await User.findOne({ email });
 
-    if (!user) {
+    if (!user || !(await bcrypt.compare(password, user.password))) {
       throw new UnprocessableEntity();
     }
   } catch (e) {
