@@ -3,21 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d481e7fe-1535-4873-b7d3-f198b859e22b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/esm/.data.blob" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/esm/.data.blob" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/esm/.data.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/esm/.data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/UserController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/errors/BaseError.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/errors/NotFoundError.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/errors/UnprocessableEntityError.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/errors/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middlewares/errorHandler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/User.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/UserService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/UserController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +14,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1mvdjYfGxO1tPsKQNbUZ352eW0V" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -61,7 +49,7 @@
       <workItem from="1610408248016" duration="4878000" />
       <workItem from="1610451252422" duration="961000" />
       <workItem from="1610457873773" duration="2271000" />
-      <workItem from="1610490635584" duration="3255000" />
+      <workItem from="1610490635584" duration="3762000" />
     </task>
     <servers />
   </component>
