@@ -1,6 +1,10 @@
 import mongoose, { Schema, model } from "mongoose";
 
 const schema = new Schema({
+  folder: {
+    type: String,
+    enum: ["inbox", "sent", "drafts", "spam", "trash"],
+  },
   message: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Message",
