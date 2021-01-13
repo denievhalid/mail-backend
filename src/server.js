@@ -3,8 +3,8 @@ import cors from "cors";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import env from "./helpers/env.js";
-import errorHandler from "./middlewares/errorHandler";
 import initRoutes from "./helpers/initRoutes";
+import initMiddlewares from "./helpers/initMiddlewares";
 
 mongoose
   .connect(env("mongo_url"), {
@@ -14,13 +14,8 @@ mongoose
   .then(() => {
     const app = express();
 
-    app.use(cors());
-    app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({ extended: false }));
-
+    initMiddlewares(app);
     initRoutes(app);
-
-    app.use(errorHandler);
 
     app.listen(env("port"));
   });

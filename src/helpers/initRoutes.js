@@ -1,4 +1,5 @@
 import { messageRoutes, userRoutes } from "../routes";
+import errorHandler from "../middlewares/errorHandler";
 
 function initRoutes(app) {
   const routes = [
@@ -15,6 +16,8 @@ function initRoutes(app) {
   routes.forEach(({ path, handler }) => {
     app.use(path, handler);
   });
+
+  app.use(errorHandler);
 }
 
 export default initRoutes;
