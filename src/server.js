@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import env from "./helpers/env.js";
 import errorHandler from "./middlewares/errorHandler";
-import { messageRoutes, userRoutes } from "./routes";
+import initRoutes from "./helpers/initRoutes";
 
 mongoose
   .connect(env("mongo_url"), {
@@ -18,8 +18,7 @@ mongoose
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: false }));
 
-    app.use("/messages", messageRoutes);
-    app.use("/users", userRoutes);
+    initRoutes(app);
 
     app.use(errorHandler);
 
