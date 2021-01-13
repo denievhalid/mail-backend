@@ -1,11 +1,7 @@
 import User from "../models/User";
-import { UnprocessableEntity } from "../errors";
 import verifyPassword from "../helpers/verifyPassword";
 import generateToken from "../helpers/generateToken";
-
-const create = (req, res) => {
-  return res.json();
-};
+import { UnprocessableEntity } from "../errors";
 
 const login = async (req, res) => {
   const { email, password } = req.body;
