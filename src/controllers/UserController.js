@@ -15,7 +15,7 @@ const login = asyncHandler(async (req, res) => {
 
   const token = generateToken({ email });
 
-  return res.status(200).json(token);
+  return res.status(200).json({ email, token });
 });
 
 const register = (req, res) => {
