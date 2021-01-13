@@ -1,8 +1,6 @@
 import express from "express";
-import cors from "cors";
 import mongoose from "mongoose";
-import bodyParser from "body-parser";
-import env from "./helpers/env.js";
+import env from "./helpers/env";
 import initRoutes from "./helpers/initRoutes";
 import initMiddlewares from "./helpers/initMiddlewares";
 
